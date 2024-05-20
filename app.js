@@ -6,7 +6,7 @@ const app = express();
 const server = require('http').createServer(app);
 const io = require('socket.io')(server,{
     cors:{
-        origin: 'https://naman-chatapp.netlify.app/' ||'http://localhost:5173',
+        origin: 'https://naman-chatapp.netlify.app/users/sign_in' ||'http://localhost:5173',
     }
 });
 require("dotenv").config();
