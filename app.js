@@ -3,7 +3,8 @@ const bcryptjs = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const cors = require('cors');
 const app = express();
-const io = require('socket.io')(8080,{
+const server = require('http0').createserver(app);
+const io = require('socket.io')(server,{
     cors:{
         origin:'http://localhost:5173',
     }
@@ -220,6 +221,6 @@ app.get('/api/users/:userId', async(req,res)=>{
     }
 })
 
-app.listen(port,()=>{
+server.listen(port,()=>{
     console.log('listening on port : ' + port);
 })
