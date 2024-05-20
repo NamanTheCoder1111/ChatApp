@@ -3,7 +3,7 @@ const bcryptjs = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 const cors = require('cors');
 const app = express();
-const server = require('http0').createserver(app);
+const server = require('http').createserver(app);
 const io = require('socket.io')(server,{
     cors:{
         origin:'http://localhost:5173',
